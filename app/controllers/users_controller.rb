@@ -12,7 +12,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(name: params[:name], term: params[:term], profile: params[:profile])
+    @user = User.new(
+      name: params[:name],
+      term: params[:term],
+      profile: params[:profile],
+      image_name: "egg.jpg"
+    )
     if @user.save
       flash[:notice] = "ユーザー登録が完了しました"
       redirect_to("/users/#{@user.id}")
@@ -30,6 +35,12 @@ class UsersController < ApplicationController
     @user.name = params[:name]
     @user.term = params[:term]
     @user.profile = params[:profile]
+    if params[:image]
+      @user.image_name = "#{@user.id}.jpg"
+      image = params[:image]
+      File.binwrite("public/user_images/#{@user.image_name}", image.read)
+    end
+    
     if @user.save
       flash[:notice] = "ユーザー情報を編集しました"
       redirect_to("/users/#{@user.id}")

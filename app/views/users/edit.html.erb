@@ -8,9 +8,11 @@
             <%= message %>
           </div>
         <% end %>
-        <%= form_tag("/users/#{@user.id}/update") do %>
+        <%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
           <p>ユーザー名</p>
           <input name="name" value="<%= @user.name %>">
+          <p>画像</p>
+          <input name="image" type="file">
           <p>受講期</p>
           <input type="number" name="term" value="<%= @user.term %>">
           <p>プロフィール</p>
