@@ -12,7 +12,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(name: params[:name], term: params[:term], profile: params[:profile])
+    @user = User.new(
+      name: params[:name],
+      term: params[:term],
+      profile: params[:profile],
+      image_name: "egg.jpg"
+    )
     if @user.save
       flash[:notice] = "ユーザー登録が完了しました"
       redirect_to("/users/#{@user.id}")
