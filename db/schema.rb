@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_08_080301) do
+ActiveRecord::Schema.define(version: 2020_09_08_122408) do
+
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content"
@@ -24,6 +25,7 @@ ActiveRecord::Schema.define(version: 2020_09_08_080301) do
     t.text "profile"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password"
     t.string "image_name"
   end
 
