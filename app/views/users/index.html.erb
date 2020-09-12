@@ -8,7 +8,9 @@
         </div>
         <div class="user-right">
           <%= link_to(user.name , "/users/#{user.id}") %>
-          <%=  user.term %>
+          <% if user.term != "" %>
+            <%=  user.term %>期生
+          <% end%>
         </div>
       </div>
     <% end %>
