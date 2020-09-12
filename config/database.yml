@@ -49,8 +49,9 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+
 production:
   <<: *default
-  database: ctc_production
-  username: my_first_app
-  password: <%= ENV['MY_FIRST_APP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5 
