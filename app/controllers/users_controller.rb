@@ -66,7 +66,7 @@ class UsersController < ApplicationController
       flash[:notice] = "ログインしました"
       redirect_to("/posts/index")
     else
-      @error_message = "メールアドレスまたはパスワードが間違っています"
+      @error_message = "名前またはパスワードが間違っています"
       @name = params[:name]
       @password = params[:password]
       render("users/login_form")
@@ -90,4 +90,14 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     @likes = Like.where(user_id: @user.id)
   end
+
+  def search
+    @term = params[:term]
+    if @term.present?
+      @users = User.where(term: params[:term])
+    else
+      @users = User.none
+    end
+  end
+
 end
