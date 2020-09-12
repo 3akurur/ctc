@@ -9,13 +9,13 @@
           </div>
         <% end %>
         <%= form_tag("/users/create") do %>
-          <p>ユーザー名</p>
+          <p>ユーザー名(必須)</p>
           <input name="name" value="<%= @user.name %>">
           <p>受講期</p>
           <input type="number" name="term" value="<%= @user.term %>">
           <p>プロフィール</p>
           <textarea name= "profile" value="<%= @user.profile %>"></textarea>
-          <p>パスワード</p>
+          <p>パスワード(必須)</p>
           <input type="password" name="password" value="<%= @user.password %>">
           <input type="submit" value="新規登録">
         <% end %>
