@@ -1,0 +1,22 @@
+<div class="main users-index">
+  <div class="container">
+    <div class="search_container">
+      <%= form_with url: users_search_path, method: :get, local: true do |f| %>
+        <%= f.text_field :term %>
+        <%= f.submit :search %>
+      <% end %>
+    </div>
+    <h1 class="users-heading"><%= @term %>期生の検索結果</h1>
+    <% @users.each do |user| %>
+      <div class="users-index-item">
+        <div class="user-left">
+          <img src="<%= "/user_images/#{user.image_name}" %>">
+        </div>
+        <div class="user-right">
+          <%= link_to(user.name , "/users/#{user.id}") %>
+          <%=  user.term %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
