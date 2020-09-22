@@ -1,24 +1,48 @@
-# README
+# Name
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Connecting with TECH::CAMP (CTC)
 
-Things you may want to cover:
+CTCはTECH::CAMP生を繋げるSNSアプリ。
 
-* Ruby version
 
-* System dependencies
+# DEMO
 
-* Configuration
+現在DEMO動画を作成中。
 
-* Database creation
+# Features
 
-* Database initialization
 
-* How to run the test suite
+なぜ多くのSNSアプリが存在する中で、新たにTECH :CAMP生専用のアプリを作ったのか？
 
-* Services (job queues, cache servers, search engines, etc.)
+TECH::CAMP内でのTwitter等のSNSアプリ使用率が低く、教室内で出会った人達と継続的に繋がれないのが残念に思った。
+Twitterを使用しない人へ理由を聞いてみると主に以下の理由でTwitterを利用するのを躊躇っているのが分かった。
+1. 何を投稿するべきか分からず、投稿しないと使う意味がないなと思ってしまう。
+2. 誰をフォローしていいか分からない。(TECH::CAMP生を探せない)
+3. 特に見たくないツイートが流れて来る事が多くメリットを感じられない。
 
-* Deployment instructions
+以下の3点の障害を取り除いたSNSを作成する事で、多くのTECH::CAMP生がSNSを利用し、仲間と繋がって行けるのではないかと思いCTCを作成した。
 
-* ...
+他のSNSと大きく違う点は次の2点だ。
+
+1.投稿機能は悪魔でも付属品にした。
+2.TECH::CAMP生専用のSNSにし、受講期毎に検索ができる機能を実装し、仲間を見つける事に特化した。
+
+# Usage
+
+https://cwtc.herokuapp.com/
+
+上記URLを開くと、ログイン画面が開くので下記の情報を入力し、ログインする。
+
+* 名前: 閲覧用
+* パスワード: eturanyou
+
+他の登録している受講生の一覧ページに移動し、それぞれのユーザーの詳細ページに飛ぶ事が出来る。
+
+# Note
+
+
+# Author
+
+* 作成者 :岡本琉雅
+* E-mail :rurukasan0212@gmail.com
+
